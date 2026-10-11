@@ -1,0 +1,212 @@
+/* ==========================================
+   ESTILOS DE LA SECCIÓN CONTACTO Y FOOTER
+   ========================================== */
+
+.contact-section {
+    padding: 90px 0;
+    background-color: #000000;
+    width: 100%;
+}
+
+.site-footer {
+    background-color: #000000;
+    border-top: 1px solid #1a1a1a;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Grid de Contacto */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+/* Tarjeta del Formulario */
+.contact-form-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #c9d1d9;
+}
+
+.form-group input,
+.form-group textarea {
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 12px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #58a6ff;
+}
+
+.btn-submit {
+    width: 100%;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+/* Tarjeta de Información de Contacto */
+.contact-info-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-title {
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.info-description {
+    font-size: 0.95rem;
+    color: #8b949e;
+    line-height: 1.6;
+}
+
+.info-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background-color: #0d1117;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #21262d;
+}
+
+.info-label {
+    font-size: 0.8rem;
+    color: #8b949e;
+    font-family: ui-monospace, SFMono-Regular, monospace;
+}
+
+.info-link {
+    color: #58a6ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.info-link:hover {
+    text-decoration: underline;
+}
+
+.info-val {
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+/* Estilos para las notificaciones de estado (Formspree) */
+.form-status {
+    margin-top: 15px;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    font-weight: bold;
+}
+
+.form-status.pending {
+    background-color: rgba(255, 208, 0, 0.1);
+    border: 1px solid #ffd000;
+    color: #ffd000;
+}
+
+.form-status.success {
+    background-color: rgba(46, 160, 67, 0.15);
+    border: 1px solid #2ea043;
+    color: #3fb950;
+}
+
+.form-status.error {
+    background-color: rgba(255, 42, 42, 0.15);
+    border: 1px solid #ff2a2a;
+    color: #ff4d4d;
+}
+
+/* ------------------------------------------
+   ESTILOS DEL PIE DE PÁGINA (FOOTER)
+   ------------------------------------------ */
+.site-footer {
+    background-color: #080a0f;
+    border-top: 1px solid #30363d;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-copy {
+    font-size: 0.9rem;
+    color: #c9d1d9;
+    font-weight: 600;
+}
+
+.footer-note {
+    font-size: 0.8rem;
+    color: #8b949e;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}

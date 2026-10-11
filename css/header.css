@@ -1,0 +1,247 @@
+/* ==========================================
+   ESTILOS DEL HEADER (ESTÉTICA CASSETTE / RETRO VINTAGE)
+   ========================================== */
+
+.site-header {
+    background-color: #000000;
+    border-bottom: 2px solid #1a1a1a;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* Franja superior tricolor de alta presencia estilo carátula de cinta */
+.retro-color-bar {
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, 
+        #ff2a2a 0%, #ff2a2a 25%, 
+        #ffd000 25%, #ffd000 50%, 
+        #00aeff 50%, #00aeff 75%, 
+        #ffffff 75%, #ffffff 100%
+    );
+    /* Sutil brillo retro en la barra */
+    box-shadow: 0 0 10px rgba(255, 42, 42, 0.3);
+}
+
+/* Contenedor general */
+.header-container {
+    width: 100%;
+    max-width: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 0 30px;
+    box-sizing: border-box;
+}
+
+/* ==========================================
+   MARCA / LOGO (CON HOVER SUAVE)
+   ========================================== */
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.brand-container:hover {
+    transform: translateY(-2px);
+}
+
+.site-logo {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    background: transparent;
+    border: none;
+    transition: filter 0.3s ease;
+}
+
+.brand-container:hover .site-logo {
+    filter: drop-shadow(0 0 6px rgba(255, 208, 0, 0.6));
+}
+
+.brand-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.brand-title {
+    font-family: "Courier New", Courier, monospace;
+    font-weight: 900;
+    font-size: 1.3rem;
+    color: #ffffff;
+    letter-spacing: 2.5px;
+    transition: color 0.3s ease;
+}
+
+.brand-dot {
+    color: #ff2a2a;
+    transition: color 0.3s ease;
+}
+
+.brand-subtitle {
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.65rem;
+    color: #888888;
+    letter-spacing: 2px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.brand-container:hover .brand-title {
+    color: #ffd000;
+}
+
+.brand-container:hover .brand-dot {
+    color: #ff2a2a;
+}
+
+.brand-container:hover .brand-subtitle {
+    color: #ffffff;
+}
+
+/* ==========================================
+   NAVEGACIÓN CON EFECTO HOVER SMOOTH (SUBRAYADO)
+   ========================================== */
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #b0b0b0;
+    text-decoration: none;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Animación de subrayado deslizante */
+/* Animación de subrayado deslizante con el gradiente tricolor */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, 
+        #ff2a2a 0%, #ff2a2a 25%, 
+        #ffd000 25%, #ffd000 50%, 
+        #00aeff 50%, #00aeff 75%, 
+        #ffffff 75%, #ffffff 100%
+    );
+    transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.nav-links a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Botón Hamburguesa Móvil Animado */
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: 1px solid #333333;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    border-radius: 4px;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    border-color: #ff2a2a;
+    background-color: rgba(255, 42, 42, 0.05);
+}
+
+.mobile-menu-btn span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: #ffffff;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* ==========================================
+   RESPONSIVO (MÓVILES)
+   ========================================== */
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 20px;
+        height: 75px;
+    }
+
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 81px;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        border-bottom: 2px solid #222222;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.9);
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), padding 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .nav-menu.active {
+        max-height: 260px;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 1.05rem;
+        width: 100%;
+        display: block;
+        padding: 8px 0;
+        border-bottom: 1px solid #1a1a1a;
+    }
+
+    .nav-links a::after {
+        display: none; /* Desactivar subrayado animado en móvil para mejor UX táctil */
+    }
+}

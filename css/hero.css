@@ -1,0 +1,281 @@
+/* ==========================================
+   ESTILOS DE LA SECCIÓN HERO
+   ========================================== */
+
+.hero-section {
+    padding: 70px 0 60px;
+    border-bottom: 1px solid #1a1a1a;
+    background-color: #000000;
+    width: 100%;
+}
+
+.hero-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Diseño en dos columnas (Grid) */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 850px;
+}
+
+/* Badge inicial */
+.hero-badge {
+    display: inline-block;
+    background-color: #161b22;
+    color: #58a6ff;
+    border: 1px solid #30363d;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 12px;
+}
+
+.hero-title .highlight {
+    color: #58a6ff;
+}
+
+/* Subtítulo */
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #8b949e;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+/* Descripción */
+.hero-description {
+    font-size: 1.05rem;
+    color: #c9d1d9;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+/* Etiquetas del Stack Técnico */
+.hero-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 35px;
+}
+
+.tech-tag {
+    background-color: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-family: monospace;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.tech-tag i {
+    font-size: 1.1rem;
+}
+
+.tech-tag:hover {
+    border-color: #58a6ff;
+    color: #58a6ff;
+}
+
+/* Botones de Acción */
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #238636;
+    color: #ffffff;
+    border: 1px solid rgba(240, 246, 252, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #2ea043;
+}
+
+.btn-secondary {
+    background-color: #21262d;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+}
+
+.btn-secondary:hover {
+    background-color: #30363d;
+    color: #ffffff;
+}
+
+/* ==========================================
+   ESTILOS DE LA TERMINAL (ESTILO AMBER / FALLOUT NEW VEGAS)
+   ========================================== */
+.hero-terminal {
+    background-color: #0d0905; /* Fondo negro con un sutil tinte cálido */
+    border: 1px solid #ffb000; /* Borde ámbar clásico de Pip-Boy */
+    border-radius: 6px;
+    overflow: hidden;
+    /* Sombra y brillo ámbar característico */
+    box-shadow: 0 0 15px rgba(255, 176, 0, 0.2), 0 16px 32px rgba(0, 0, 0, 0.8);
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.9rem;
+    position: relative;
+}
+
+/* Efecto de líneas de escaneo (Scanlines) tipo monitor CRT antiguo */
+.hero-terminal::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+    background-size: 100% 4px;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.terminal-header {
+    background-color: #1a1200;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-bottom: 1px solid #ffb000;
+}
+
+.terminal-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* Botones estilo terminal analógica */
+.terminal-dot.red { background-color: #ff4400; }
+.terminal-dot.yellow { background-color: #ffb000; }
+.terminal-dot.green { background-color: #cc8800; }
+
+.terminal-title {
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 0.75rem;
+    color: #ffb000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.terminal-body {
+    padding: 20px;
+    color: #ffb000; /* Texto principal en tono ámbar brillante */
+    line-height: 1.6;
+    position: relative;
+    z-index: 1;
+    /* Efecto de resplandor suave en el texto (Glow effect) */
+    text-shadow: 0 0 6px rgba(255, 176, 0, 0.4);
+}
+
+.t-prompt {
+    color: #ffcc44;
+    font-weight: bold;
+}
+
+.t-cmd {
+    color: #ffffff; /* Comando en blanco puro para resaltar */
+}
+
+.t-json {
+    color: #ffb000; /* Ámbar estándar para la estructura */
+}
+
+.t-key {
+    color: #ffd066; /* Llaves del JSON en un ámbar más claro */
+}
+
+.t-str {
+    color: #ffea99; /* Valores de texto en tonos dorados cálidos */
+}
+
+.t-blink {
+    animation: blink 0.8s infinite;
+    color: #ffb000;
+    font-weight: bold;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+/* ==========================================
+   RESPONSIVO (MÓVILES Y TABLETS)
+   ========================================== */
+@media (max-width: 968px) {
+    .hero-grid {
+        grid-template-columns: 1fr; /* En pantallas medianas/chicas se pone una columna sobre otra */
+        gap: 40px;
+    }
+
+    .hero-terminal {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 2.1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

@@ -1,0 +1,72 @@
+<section id="contacto" class="contact-section">
+    <div class="contact-container">
+        
+        <!-- Cabecera de la sección -->
+        <div class="section-header">
+            <span class="section-tag">&gt; ./send_message.sh</span>
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-subtitle">¿Tienes un proyecto en mente, una propuesta laboral o quieres colaborar? Escríbeme.</p>
+        </div>
+
+        <div class="contact-grid">
+            
+            <!-- Columna Izquierda: Formulario de Contacto -->
+            <div class="contact-form-card">
+                <!-- Reemplaza "TU_FORM_ID_AQUI" con el ID que te da Formspree -->
+                <form id="contactForm" action="https://formspree.io/f/mgaoypwy" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Tu Nombre</label>
+                        <input type="text" name="name" id="name" placeholder="Ej. Carlos Pérez" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" placeholder="correo@ejemplo.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Mensaje</label>
+                        <textarea name="message" id="message" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" id="submitBtn" class="btn btn-primary btn-submit">🚀 Enviar Mensaje</button>
+                    
+                    <!-- Feedback de Estado en pantalla (Estilo Terminal) -->
+                    <div id="formStatus" class="form-status" style="display: none;"></div>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Información directa -->
+            <div class="contact-info-card">
+                <h3 class="info-title">Conectemos</h3>
+                <p class="info-description">
+                    También puedes contactarme directamente por correo o revisar mis repositorios y perfiles profesionales. ¡Siempre abierto a nuevos retos de programación y gamedev!
+                </p>
+
+                <div class="info-items">
+                    <div class="info-item">
+                        <span class="info-label">📧 Correo:</span>
+                        <a href="mailto:tu-correo@ejemplo.com" class="info-link">tu-correo@ejemplo.com</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">💻 GitHub:</span>
+                        <a href="https://github.com" target="_blank" class="info-link">github.com/tu-usuario</a>
+                    </div>
+                    <div class="info-item">
+                        <span class="info-label">🎓 Educación:</span>
+                        <span class="info-val">ITE (Ing. en Sistemas Computacionales)</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Pie de Página (Footer) -->
+<footer class="site-footer">
+    <div class="footer-container">
+        <p class="footer-copy">&copy; 2026 Luis Enrique Prado Meléndez. Todos los derechos reservados.</p>
+        <p class="footer-note">Diseñado con HTML, CSS, JS modular y mucha pasión por el código y el retro gamedev.</p>
+    </div>
+</footer>
