@@ -1,0 +1,79 @@
+.retro-body {
+    background-color: #000000;
+    color: #00ff66;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    padding: 20px;
+}
+
+.gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #333;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.back-btn {
+    color: #3fb950;
+    text-decoration: none;
+    border: 1px solid #3fb950;
+    padding: 6px 12px;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background-color: #3fb950;
+    color: #000;
+}
+
+/* Cuadrícula Estilo Pinterest (Columns) */
+.pinterest-container {
+    column-count: 3; /* Número de columnas en pantallas grandes */
+    column-gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .pinterest-container { column-count: 2; }
+}
+@media (max-width: 600px) {
+    .pinterest-container { column-count: 1; }
+}
+
+.pin-card {
+    break-inside: avoid;
+    margin-bottom: 15px;
+    background: #0a0a0a;
+    border: 1px solid #222;
+    border-radius: 6px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.2s;
+}
+
+.pin-card:hover {
+    border-color: #3fb950;
+    transform: translateY(-3px);
+}
+
+.pin-card img {
+    width: 100%;
+    display: block;
+    image-rendering: pixelated;
+}
+
+.pin-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 8px 12px;
+    font-size: 0.75rem;
+    color: #aaa;
+    border-top: 1px solid #222;
+}

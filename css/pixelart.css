@@ -1,0 +1,51 @@
+#pixelart-section {
+    background-color: #000000;
+    border: 1px solid #333;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: "Courier New", Courier, monospace;
+    color: #00ff66;
+}
+
+.terminal-header {
+    border-bottom: 1px dashed #333;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.pixelart-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.pixel-card {
+    background: #0a0a0a;
+    border: 1px solid #222;
+    padding: 10px;
+    text-align: center;
+}
+
+.pixel-screen {
+    background: #000;
+    border: 1px solid #444;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 120px;
+}
+
+.pixel-img {
+    max-width: 100%;
+    height: auto;
+    image-rendering: pixelated; /* Mantiene nítido el pixel art */
+}
+
+.pixel-caption {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    color: #aaa;
+}

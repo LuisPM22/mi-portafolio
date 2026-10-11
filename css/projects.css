@@ -155,6 +155,87 @@
     color: #ffffff;
 }
 
+.cassette-cta-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.cassette-card {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    background-color: #0f0f0f;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 5px 5px 0px #ff5500; /* Toque de color vibrante estilo cassette */
+}
+
+.cassette-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 8px 8px 0px #ff5500;
+}
+
+/* Franjas geométricas de colores estilo cassette */
+.cassette-stripes {
+    display: flex;
+    height: 10px;
+    width: 100%;
+}
+
+.stripe {
+    flex: 1;
+}
+.stripe.orange { background-color: #ff5500; }
+.stripe.blue { background-color: #0055ff; }
+.stripe.yellow { background-color: #ffcc00; }
+
+.cassette-content {
+    padding: 25px 30px;
+    background: #000000;
+    border-top: 1px solid #333;
+}
+
+.cassette-label-top {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    color: #888;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.cassette-title {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0 0 15px 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+.cassette-action {
+    display: inline-block;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 8px 14px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    transition: background 0.2s, color 0.2s;
+}
+
+.cassette-card:hover .cassette-action {
+    background-color: #ff5500;
+    color: #ffffff;
+}
+
 /* Responsivo */
 @media (max-width: 768px) {
     .projects-grid {

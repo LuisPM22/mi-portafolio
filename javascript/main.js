@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", async () => {
         { id: 'hero-container', file: 'html/hero.html' },
         { id: 'about-container', file: 'html/about.html' },
         { id: 'projects-container', file: 'html/projects.html' },
+        { id: 'pixelart-container', file: 'html/pixelart.html' },
         { id: 'contact-container', file: 'html/contact.html', callback: inicializarFormularioContacto }
     ];
 
