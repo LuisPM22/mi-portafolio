@@ -144,9 +144,40 @@
     color: #ffffff;
 }
 
+/*foco de disponivilidad 
+*/
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 1px solid #2ea043;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 0.85rem;
+    color: #3fb950;
+    margin-bottom: 15px;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #3fb950;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #3fb950;
+    animation: blinkPulse 1.5s infinite;
+}
+
+@keyframes blinkPulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.3; }
+    100% { opacity: 1; }
+}
+
 /* ==========================================
-   ESTILOS DE LA TERMINAL (ESTILO AMBER / FALLOUT NEW VEGAS)
-   ========================================== */
+ESTILOS DE LA TERMINAL (ESTILO AMBER / FALLOUT NEW VEGAS)
+========================================== */
 .hero-terminal {
     background-color: #0d0905; /* Fondo negro con un sutil tinte cálido */
     border: 1px solid #ffb000; /* Borde ámbar clásico de Pip-Boy */
