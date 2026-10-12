@@ -61,9 +61,68 @@
     color: #ffb000;
 }
 
+
 /* ------------------------------------------
-   ESTILOS REPRODUCTOR WINAMP RETRO
+   BOTÓN DE DESCARGA CV (ESTILO CASSETTE)
    ------------------------------------------ */
+.about-actions {
+    margin-top: 10px;
+}
+
+.cv-cassette-btn {
+    display: inline-block;
+    background-color: #000000;
+    border: 2px solid #ffffff;
+    text-decoration: none;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 4px 4px 0px #ff5500; /* Sombra sólida naranja cassette */
+}
+
+.cv-cassette-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 7px 7px 0px #ffcc00; /* Sombra amarilla brillante al pasar el cursor */
+    border-color: #ffcc00;
+}
+
+/* Franjas de colores primarios estilo cassette */
+.cv-stripe {
+    display: block;
+    height: 4px;
+    width: 100%;
+}
+.cv-stripe.red { background-color: #ff3300; }
+.cv-stripe.yellow { background-color: #ffcc00; }
+.cv-stripe.blue { background-color: #0055ff; }
+
+.cv-btn-content {
+    padding: 12px 20px;
+}
+
+.cv-label {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+    color: #8b949e;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 4px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.cv-title {
+    font-size: 0.95rem;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* ------------------------------------------
+ESTILOS REPRODUCTOR WINAMP RETRO
+------------------------------------------ */
 .winamp-player {
     background: linear-gradient(145deg, #21262d, #161b22);
     border: 2px solid #30363d;
