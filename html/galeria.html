@@ -7,19 +7,26 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/galeria.css">
 </head>
-<body class="retro-body">
+<body class="crt-body">
 
-    <header class="gallery-header">
-        <a href="../index.html" class="back-btn">&lt; [VOLVER AL INICIO]</a>
-        <h1>&gt; ARCHIVO_MULTIMEDIA // GALERÍA_AUTOMÁTICA</h1>
+    <!-- Cabecera estilo panel de telemetría CRT -->
+    <header class="crt-header">
+        <div class="crt-header-top">
+            <a href="../index.html" class="crt-back-btn">&lt; [VOLVER_AL_INDEX]</a>
+            <span class="crt-status-indicator">SYS_STATUS: ONLINE // 99.4%</span>
+        </div>
+        <div class="crt-title-banner">
+            <h1>&gt; ARCHIVO_MULTIMEDIA // TELEMETRÍA_Y_PIXEL_ART</h1>
+            <p class="crt-subtext">SISTEMA DE MONITOREO DE ASSETS - GODOT & ASEPRITE</p>
+        </div>
     </header>
 
-    <!-- Contenedor donde la magia de JavaScript inyectará las imágenes -->
+    <!-- Contenedor Estilo Mampostería / Cuadrícula CRT -->
     <main id="pinterest-container" class="pinterest-container">
-        <p style="color: #888;">&gt; CARGANDO ASSETS DESDE EL REPOSITORIO...</p>
+        <div class="crt-loading">&gt; ESTABLECIENDO CONEXIÓN CON EL SERVIDOR DE ASSETS...</div>
     </main>
 
-    <!-- Script que lee la carpeta de GitHub -->
+    <!-- Script de carga automática -->
     <script src="../javascript/galeria.js"></script>
 </body>
 </html>

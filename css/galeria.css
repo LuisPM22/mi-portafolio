@@ -1,79 +1,177 @@
-.retro-body {
-    background-color: #000000;
-    color: #00ff66;
-    font-family: "Courier New", Courier, monospace;
+/* ==========================================================================
+   ESTÉTICA CUBIERTA CASSETTE & CRT HÍBRIDA
+   ========================================================================== */
+.crt-body {
+    background-color: #0b0b0b;
+    color: #ffffff;
+    font-family: "Helvetica Neue", Arial, "Courier New", Courier, monospace;
     margin: 0;
     padding: 20px;
+    box-sizing: border-box;
 }
 
-.gallery-header {
+/* Cabecera estilo carátula retro */
+.crt-header {
+    max-width: 1200px;
+    margin: 0 auto 35px auto;
+    border: 2px solid #ffffff;
+    background: #000000;
+    padding: 20px;
+    box-shadow: 6px 6px 0px #ff5500; /* Sombra sólida estilo cassette */
+    position: relative;
+}
+
+.crt-header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px dashed #333;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 2px dashed #333;
+    padding-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.back-btn {
-    color: #3fb950;
-    text-decoration: none;
-    border: 1px solid #3fb950;
-    padding: 6px 12px;
-    border-radius: 4px;
-    transition: background 0.2s;
-}
-
-.back-btn:hover {
-    background-color: #3fb950;
+.crt-back-btn {
     color: #000;
+    background-color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    transition: all 0.2s ease;
 }
 
-/* Cuadrícula Estilo Pinterest (Columns) */
+.crt-back-btn:hover {
+    background-color: #ff5500;
+    color: #ffffff;
+    border-color: #ff5500;
+}
+
+.crt-status-indicator {
+    font-size: 0.75rem;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.crt-title-banner h1 {
+    font-size: 1.4rem;
+    font-weight: 900;
+    margin: 0 0 8px 0;
+    color: #ffffff;
+    letter-spacing: 1px;
+    word-break: break-word;
+}
+
+.crt-subtext {
+    font-size: 0.8rem;
+    color: #ff5500;
+    margin: 0;
+    font-family: "Courier New", Courier, monospace;
+    letter-spacing: 1px;
+}
+
+.crt-loading {
+    text-align: center;
+    color: #ffcc00;
+    padding: 50px;
+    font-size: 1rem;
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* ==========================================================================
+   CUADRÍCULA ESTILO PINTEREST / MASONRY GRID
+   ========================================================================== */
 .pinterest-container {
-    column-count: 3; /* Número de columnas en pantallas grandes */
-    column-gap: 15px;
+    column-count: 3;
+    column-gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
     .pinterest-container { column-count: 2; }
 }
 @media (max-width: 600px) {
     .pinterest-container { column-count: 1; }
 }
 
+/* ==========================================================================
+   TARJETAS DE ASSETS CON ESTÉTICA DE PORTADA DE CASSETTE
+   ========================================================================== */
 .pin-card {
     break-inside: avoid;
-    margin-bottom: 15px;
-    background: #0a0a0a;
-    border: 1px solid #222;
-    border-radius: 6px;
+    margin-bottom: 20px;
+    background: #111111;
+    border: 2px solid #ffffff;
+    border-radius: 0px; /* Bordes rectos industriales de cassette */
     overflow: hidden;
     position: relative;
-    transition: transform 0.2s;
+    box-shadow: 4px 4px 0px #0055ff; /* Sombra azul vibrante inicial */
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    animation: fadeInCard 0.4s ease forwards;
 }
 
 .pin-card:hover {
-    border-color: #3fb950;
-    transform: translateY(-3px);
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 0px #ff5500; /* Cambia a sombra naranja fuerte al pasar el cursor */
+    border-color: #ffcc00;
+}
+
+/* Franjas geométricas decorativas estilo carátula en cada tarjeta */
+.pin-card::before {
+    content: "";
+    display: block;
+    height: 6px;
+    width: 100%;
+    background: linear-gradient(90deg, #ff5500 33%, #ffcc00 33%, #ffcc00 66%, #0055ff 66%);
 }
 
 .pin-card img {
     width: 100%;
     display: block;
     image-rendering: pixelated;
+    background-color: #050505;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.pin-card:hover img {
+    transform: scale(1.02);
 }
 
 .pin-overlay {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.85);
-    padding: 8px 12px;
+    background: #000000;
+    padding: 10px 14px;
     font-size: 0.75rem;
-    color: #aaa;
-    border-top: 1px solid #222;
+    color: #ffffff;
+    border-top: 2px solid #222;
+    letter-spacing: 1px;
+    font-family: "Courier New", Courier, monospace;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pin-overlay span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Animación sutil de aparición para dar vida al cargar */
+@keyframes fadeInCard {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
